@@ -34,6 +34,7 @@
         default = pkgs.mkShell {
           name = "helix";
           packages = with pkgs; [
+            helix-gpt
             (jk-hx pkgs)
             nil
           ];
@@ -41,6 +42,7 @@
       });
 
       packages = forAllSystems (pkgs: {
+        helix-gpt = pkgs.helix-gpt;
         default = (jk-hx pkgs);
       });
     };

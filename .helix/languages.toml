@@ -1,0 +1,9 @@
+[language-server.gpt]
+command = "helix-gpt" 
+args = ["--handler", "codeium"]
+
+[[language]]
+name = "markdown"
+language-servers = [
+    "gpt"
+]
