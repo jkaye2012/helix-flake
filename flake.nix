@@ -30,14 +30,18 @@
       });
     in
     {
-      devShell = forAllSystems (pkgs: 
-        pkgs.mkShell {
+      devShells = forAllSystems (pkgs: {
+        default = pkgs.mkShell {
           name = "helix";
           packages = with pkgs; [
             (jk-hx pkgs)
             nil
           ];
-        }
-      );
+        };
+      });
+
+      packages = forAllSystems (pkgs: {
+        default = (jk-hx pkgs);
+      });
     };
 }
