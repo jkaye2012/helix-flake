@@ -9,3 +9,6 @@ text-width = 120
 insert = "bar"
 normal = "block"
 select = "underline"
+
+[keys.normal."space"]
+o = "file_picker_in_current_buffer_directory"
