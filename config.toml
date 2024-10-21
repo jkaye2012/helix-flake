@@ -12,3 +12,8 @@ select = "underline"
 
 [keys.normal."space"]
 o = "file_picker_in_current_buffer_directory"
+
+[keys.normal]
+"0" = "goto_line_start"
+"$" = "goto_line_end"
+"^" = "goto_first_nonwhitespace"
